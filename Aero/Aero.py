@@ -1,7 +1,7 @@
 import pygame
 from sys import exit
 from random import randint
-from data.sprites import Player, enemy_group, player_group, Enemy, explosion_group
+from data.sprites import Player, Enemy, enemy_group, player_group, explosion_group
 from data.settings import screen, clock, fps, start_time, score, last_shot, can_shoot, game_active
 
 
@@ -146,7 +146,7 @@ while True:
         # score
         score = display_score()
 
-    else:
+    else: # endgame
         propeller_sound.fadeout(0)
         background_music.fadeout(1000)
         enemy_group.empty()
