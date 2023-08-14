@@ -91,7 +91,7 @@ while True:
                 game_active = 1
                 start_time = int(pygame.time.get_ticks() / 100)
 
-        if game_active == 1:
+        if game_active:
             if event.type == enemy_timer:  # spawn enemy
                 enemy_group.add(Enemy())
 
